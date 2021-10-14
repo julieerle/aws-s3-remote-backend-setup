@@ -1,12 +1,14 @@
 # tags to assign to all resources
 locals {
 
-    common_tags = {
-        Owner = "julie.erlemeier@hashicorp.com"
-        Team = "terraform-cli-support"
+  common_tags = {
+    owner = "julie.erlemeier@hashicorp.com"
+    team  = "terraform-cli-support"
   }
 }
 
 variable "aws_region" {
-    value = "us-west-2"
+  default     = "us-west-2"
+  type        = string
+  description = "Infra will be provisioned in this AWS region (Oregon)."
 }

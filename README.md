@@ -14,6 +14,31 @@ local machine
 ## Workflow
 `dmr`
 `dma`
+`terraform init`
+`terraform fmt`
+`terraform plan`
+`terraform apply`
+
+## File structure
+
+aws-sandbox-tf
+├── README.md
+├── main.tf
+├── outputs.tf
+├── provider.tf
+└── variables.tf
+
+## Naming Convention
+
+| terraform	| cloud | provider	function	| full name
+|--------|--------|--------|--------|
+|terraform	| aws	| consul cluster	| terraform-aws-consul_cluster
+|terraform	| aws	| security module	| terraform-aws-security
+|terraform	| azure	| database	| terraform-azure-database
+
+###### Tips
+1. Use only one module per repository.
+2. Track all changes with version control with detailed commit messages.
 
 ###### Resources
 [1] https://registry.terraform.io/providers/hashicorp/aws/latest/docs

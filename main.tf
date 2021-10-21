@@ -42,3 +42,12 @@ resource "aws_s3_bucket_public_access_block" "julie-remote-state" {
   block_public_acls   = true
   block_public_policy = true
 }
+
+# resource "aws_instance" "app_server" {
+#   ami           = "ami-830c94e3"
+#   instance_type = "t2.micro"
+
+#   tags = {
+#     Name = "ExampleAppServerInstance"
+#   }
+# }

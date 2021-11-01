@@ -1,5 +1,3 @@
-#  Data Lookups
-
 # Resources
 resource "aws_s3_bucket" "julie-remote-state" {
   bucket = "julie-remote-state"
@@ -48,6 +46,11 @@ resource "aws_s3_bucket_public_access_block" "julie-remote-state" {
 
   block_public_acls   = true
   block_public_policy = true
+}
+
+resource "aws_s3_bucket_object" "aws-sandbox-dev" {
+  bucket = aws_s3_bucket.julie-remote-state.id
+  key    = "aws-sandbox/dev/"
 }
 
 resource "aws_dynamodb_table" "julie-terraform-state-lock-dynamo" {

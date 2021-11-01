@@ -8,7 +8,7 @@ locals {
 }
 
 variable "aws_region" {
+  description = "Infra will be provisioned in this AWS region (Oregon)."
   default     = "us-west-2"
   type        = string
-  description = "Infra will be provisioned in this AWS region (Oregon)."
 }

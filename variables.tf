@@ -1,9 +1,10 @@
-# tags to assign to all resources
 locals {
+  owner = "julie.erlemeier@hashicorp.com"
+  team  = "terraform-cli-support"
 
   common_tags = {
-    owner = "julie.erlemeier@hashicorp.com"
-    team  = "terraform-cli-support"
+    owner = local.owner
+    team  = local.team
   }
 }
 

@@ -50,7 +50,7 @@ resource "aws_s3_bucket_public_access_block" "julie-remote-state" {
 
 resource "aws_s3_bucket_object" "aws-sandbox-dev" {
   bucket = aws_s3_bucket.julie-remote-state.id
-  key    = "aws-sandbox/dev/"
+  key    = "aws-sandbox/dev/terraform.tfstate"
 }
 
 resource "aws_dynamodb_table" "julie-terraform-state-lock-dynamo" {
